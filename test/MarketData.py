@@ -1,8 +1,9 @@
 import market.FinancialMarketData as fd
-import market.QuestradeData as qd
+import market.QuestradeData as QD
 import numpy as np
 
 
-# data = qd.login("z5nFFCcrSwQzIM4OaAUg3mYBFVigoppP0")
-data = qd.searchSymbol('https://api01.iq.questrade.com/', 'TSLA', 'ttlQ48C3eyEB4jPanfLDev0AkTf17iLO0')
+qd = QD.QuestradeData()
+data = qd.login('XXXX')
+data = qd.getCandles('AAPL', '2020-01-01T00:00:00-05:00', '2020-10-20T23:59:59-05:00', 'OneDay')
 print(data)
